@@ -1,0 +1,15 @@
+<%= form_for(@link) do |f| %>
+  <div class="form-goup">
+    <%= f.label :Display_Title %>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= f.label :Link %>
+    <%= f.text_field :user_link %>
+  </div>
+  <br>
+
+<%= f.submit(:class => "btn btn-primary") %>
+
+<% end %>

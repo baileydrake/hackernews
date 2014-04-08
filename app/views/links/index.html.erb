@@ -1,0 +1,15 @@
+<h1>HackerNews</h1>
+
+<ol>
+  <% @links.each do |link| %>
+  <li>
+    <%= link_to "^", link_path(link, "link[vote]" => (link.up_vote)), :data => {:method => :patch} %>
+    <a href="<%= link.user_link %>" target="_blank"><%= link.title %></a>
+    <h6>votes: <%= link.vote %> <%= link.long_ago %> | <%= link_to "comments", </h6>
+  </li>
+  <% end %>
+</ol>
+
+
+
+<h5><%= link_to "Add a Link", new_link_path, :class=> "btn btn-default" %></h5>
