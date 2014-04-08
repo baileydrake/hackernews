@@ -17,7 +17,7 @@ class LinksController < ApplicationController
   end
 
   def index
-    @links = Link.all
+    @links = Link.order(vote: :desc)
   end
 
   def update

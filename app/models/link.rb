@@ -17,10 +17,10 @@ class Link < ActiveRecord::Base
   def long_ago
     time = (Time.now - (self.created_at)).to_i
 
-    if time > 360
+    if time > 3600
+      "#{(time/3600).to_i} hour ago"
+    elsif time > 360
       "#{time/60} mins ago"
-    elsif time > 3600
-      "#{(time/3600).to_i} hours ago"
     end
   end
 

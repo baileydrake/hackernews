@@ -5,7 +5,7 @@
   <li>
     <%= link_to "^", link_path(link, "link[vote]" => (link.up_vote)), :data => {:method => :patch} %>
     <a href="<%= link.user_link %>" target="_blank"><%= link.title %></a>
-    <h6>votes: <%= link.vote %> <%= link.long_ago %> | <%= link_to "comments", </h6>
+    <h6>votes: <%= link.vote %> <%= link.long_ago %> </h6>
   </li>
   <% end %>
 </ol>
