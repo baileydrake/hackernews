@@ -16,6 +16,10 @@ class LinksController < ApplicationController
     end
   end
 
+  def show
+    @link = Link.find(params[:id])
+  end
+
   def index
     @links = Link.order(vote: :desc)
   end
